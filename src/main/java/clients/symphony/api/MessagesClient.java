@@ -18,6 +18,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.NoContentException;
 import javax.ws.rs.core.Response;
 import java.io.File;
+import java.math.BigInteger;
 import java.util.*;
 
 public final class MessagesClient extends APIClient {
@@ -135,7 +136,7 @@ public final class MessagesClient extends APIClient {
     }
 
     public List<InboundMessage> getMessagesFromStream(String streamId,
-                                                      int since, int skip,
+                                                      BigInteger since, int skip,
                                                       int limit)
         throws SymClientException {
         List<InboundMessage> result = null;
